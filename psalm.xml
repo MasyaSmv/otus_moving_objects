@@ -5,15 +5,12 @@
         resolveFromConfigFile="true"
 >
     <projectFiles>
-        <!-- Анализируем только папку src. (В ней будет лежать весь код: классы, интерфейсы, VO и т.п.) -->
+        <!-- Анализируем только папку src/ -->
         <directory name="src"/>
 
-        <!-- Не анализировать весь код из vendor/ -->
-        <ignore name="vendor"/>
-        <!-- Не анализировать тесты -->
-        <ignore name="tests"/>
-        <!-- И, чтобы наверняка, не брать случайно что-либо в node_modules (если вдруг будет) -->
-        <ignore name="node_modules"/>
+        <!-- Исключаем из анализа -->
+        <exclude name="vendor"/>
+        <exclude name="tests"/>
+        <exclude name="node_modules"/>
     </projectFiles>
-
 </psalm>
