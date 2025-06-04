@@ -1,16 +1,19 @@
 <?xml version="1.0"?>
 <psalm
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:noNamespaceSchemaLocation="https://getpsalm.org/schema/config"
         totallyTyped="false"
         errorLevel="4"
-        resolveFromConfigFile="true"
 >
     <projectFiles>
-        <!-- Анализируем только папку src/ -->
+        <!-- Анализируем только код из src/ -->
         <directory name="src"/>
 
-        <!-- Исключаем из анализа -->
-        <exclude name="vendor"/>
-        <exclude name="tests"/>
-        <exclude name="node_modules"/>
+        <!-- Игнорируем vendor/ и tests/ -->
+        <ignoreFiles>
+            <directory name="vendor"/>
+            <directory name="tests"/>
+            <directory name="node_modules"/>
+        </ignoreFiles>
     </projectFiles>
 </psalm>
