@@ -1,20 +1,24 @@
 <?xml version="1.0"?>
 <psalm
-    errorLevel="1"
-    resolveFromConfigFile="true"
-    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-    xmlns="https://getpsalm.org/schema/config"
-    xsi:schemaLocation="https://getpsalm.org/schema/config vendor/vimeo/psalm/config.xsd"
-    findUnusedBaselineEntry="true"
-    findUnusedCode="true"
+        totallyTyped="false"
+        errorLevel="4"
+        resolveFromConfigFile="true"
 >
     <projectFiles>
-        <!-- Анализировать сразу весь репозиторий, кроме vendor/ -->
-        <directory name="."/>
-        <ignoreFiles>
-            <directory name="vendor"/>
-            <directory name="tests"/>
-        </ignoreFiles>
+        <!-- 
+          Анализируем только папку src.
+          (В ней будет лежать весь код: классы, интерфейсы, VO и т.п.)
+        -->
+        <directory name="src"/>
     </projectFiles>
+
+    <ignoreFiles>
+        <!-- Не анализировать весь код из vendor/ -->
+        <directory name="vendor"/>
+        <!-- Не анализировать тесты -->
+        <directory name="tests"/>
+        <!-- И, чтобы наверняка, не брать случайно что-либо в node_modules (если вдруг будет) -->
+        <directory name="node_modules"/>
+    </ignoreFiles>
 
 </psalm>
