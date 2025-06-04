@@ -6,14 +6,7 @@
         errorLevel="4"
 >
     <projectFiles>
-        <!-- Анализируем только код из src/ -->
+        <!-- Анализируем только код из папки src/ -->
         <directory name="src"/>
-
-        <!-- Игнорируем vendor/ и tests/ -->
-        <ignoreFiles>
-            <directory name="vendor"/>
-            <directory name="tests"/>
-            <directory name="node_modules"/>
-        </ignoreFiles>
     </projectFiles>
 </psalm>
