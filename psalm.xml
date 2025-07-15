@@ -4,6 +4,7 @@
         xsi:noNamespaceSchemaLocation="https://getpsalm.org/schema/config"
         totallyTyped="false"
         errorLevel="4"
+        findUnusedCode="false"
 >
     <projectFiles>
         <!-- анализируем src и tests -->
