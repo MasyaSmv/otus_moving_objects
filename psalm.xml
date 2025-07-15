@@ -4,9 +4,21 @@
         xsi:noNamespaceSchemaLocation="https://getpsalm.org/schema/config"
         totallyTyped="false"
         errorLevel="4"
+        findUnusedCode="false"
 >
     <projectFiles>
-        <!-- Анализируем только код из папки src/ -->
+        <!-- анализируем src и tests -->
         <directory name="src"/>
+        <directory name="tests"/>
+
+        <!-- игнорируем vendor -->
+        <ignoreFiles>
+            <directory name="vendor"/>
+        </ignoreFiles>
     </projectFiles>
+
+    <issueHandlers>
+        <!-- отключаем подсказки о MissingOverrideAttribute -->
+        <MissingOverrideAttribute errorLevel="suppress"/>
+    </issueHandlers>
 </psalm>
