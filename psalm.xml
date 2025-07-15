@@ -9,4 +9,8 @@
         <!-- Анализируем только код из папки src/ -->
         <directory name="src"/>
     </projectFiles>
+    <issueHandlers>
+        <!-- отключаем подсказки о MissingOverrideAttribute -->
+        <MissingOverrideAttribute errorLevel="suppress"/>
+    </issueHandlers>
 </psalm>
