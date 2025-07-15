@@ -49,7 +49,8 @@ class MoverTest extends TestCase
                 return new Vector2D(1, 1);
             }
         };
-
+        
+        /** @psalm-suppress InvalidArgument */
         (new Mover())->move($broken);
     }
 }
