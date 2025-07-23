@@ -1,4 +1,8 @@
 {
+  "name": "masyasmv/otus_moving_objects",          
+  "description": "Moving / Rotating abstractions",
+  "type": "library",
+  "license": "MIT",
   "require-dev": {
     "php": "^8.3",
     "phpunit/phpunit": "^12.1",
